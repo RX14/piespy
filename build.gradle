@@ -1,4 +1,7 @@
-apply plugin: 'java'
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '1.2.2'
+}
 
 version = '0.4.0'
 
@@ -8,4 +11,14 @@ repositories {
 
 dependencies {
     compile 'pircbot:pircbot:1.5.0'
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "org.jibble.socnet.SocialNetworkBot"
+    }
+}
+
+artifacts {
+    archives shadowJar
 }
