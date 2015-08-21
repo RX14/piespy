@@ -1,2 +1,3 @@
 #!/bin/sh
-java -Djava.awt.headless=true -classpath .:./lib/pircbot.jar org.jibble.socnet.SocialNetworkBot ./config.ini
+[ -e build/libs/PieSpy-*-all.jar ] || ./gradlew build
+java -Djava.awt.headless=true -jar build/libs/PieSpy-*-all.jar ./config.ini
