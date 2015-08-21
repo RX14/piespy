@@ -26,6 +26,7 @@ public class Configuration implements java.io.Serializable {
     public int port;
     public String serverPassword;
     public String nick;
+    public String user;
     public HashSet channelSet;
     
     public int outputWidth;
@@ -70,6 +71,7 @@ public class Configuration implements java.io.Serializable {
         port = getInt("Port");
         serverPassword = getString("ServerPassword");
         nick = getString("Nick");
+        user = getString("User");
         channelSet = getSet("ChannelSet");
         
         outputWidth = getInt("OutputWidth");

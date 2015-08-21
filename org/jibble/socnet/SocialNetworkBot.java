@@ -288,7 +288,7 @@ public class SocialNetworkBot extends PircBot {
         SocialNetworkBot bot = new SocialNetworkBot(config);
         bot.setVerbose(config.verbose);
         bot.setName(config.nick);
-        bot.setLogin("piespy");
+        bot.setLogin(config.user);
         bot.setVersion(VERSION + " http://www.jibble.org/piespy/");
         
         try {
