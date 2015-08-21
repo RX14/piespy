@@ -170,6 +170,11 @@ public class SocialNetworkBot extends PircBot {
         
         if (recipientNick.equalsIgnoreCase(getNick())) {
             // The bot was kicked, so rejoin the channel (if possible).
+            try {
+                Thread.sleep(5000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             joinChannel(channel);
         }
     }
